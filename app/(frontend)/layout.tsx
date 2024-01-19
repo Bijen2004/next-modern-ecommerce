@@ -5,5 +5,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <main className="flex-grow container mx-auto px-4">{children}</main>
+  return <main className="flex-grow container mx-auto px-4 lg:max-w-[85%]">{children}</main>
 }

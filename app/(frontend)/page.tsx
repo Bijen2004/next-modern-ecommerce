@@ -1,8 +1,19 @@
+import ProductItem from '@/components/ProductItem'
+import data from '@/lib/data'
 import React from 'react'
 
 const Homepage = () => {
   return (
-    <div className='text-2xl font-semibold'>Latest Products</div>
+    <>
+    <h2 className='text-2xl font-semibold'>Latest Products</h2>
+    <div className='grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4'>
+      {
+        data.products.map((product)=>(
+        <ProductItem key={product.slug} product={product}/>
+        ))
+      }
+    </div>
+    </>
   )
 }
 

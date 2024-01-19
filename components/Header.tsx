@@ -1,20 +1,21 @@
 import Link from 'next/link'
 import React from 'react'
+import Menu from './Menu'
+import Image from 'next/image'
 
 const Header = () => {
   return (
     <header>
       <nav>
-        <div className='navbar justify-between bg-white/5'>
-            <Link href='/' className='btn btn-ghost text-lg'>BG Arts</Link>
-            <ul className='flex'>
-              <li>
-              <Link href='/cart' className='btn btn-ghost rounded-btn'>Cart</Link>
-              </li>
-              <li>
-              <Link href='/signin' className='btn btn-ghost rounded-btn'>Sign in</Link>
-              </li>
-            </ul>
+        <div className='navbar justify-between bg-[#FFFFFF0D]'>
+            <Link href='/'>
+            <Image src='/images/bgartLogo.jpg'
+             alt='logo'
+             width={70}
+             height={70}>
+            </Image>
+            </Link>
+            <Menu />
         </div>
       </nav>
     </header>
